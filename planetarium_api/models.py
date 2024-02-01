@@ -12,7 +12,7 @@ class PlanetariumDome(models.Model):
         return self.name
 
 
-class Reservations(models.Model):
+class Reservation(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
@@ -48,7 +48,7 @@ class Ticket(models.Model):
     row = models.IntegerField()
     seat = models.IntegerField()
     show_session = models.ForeignKey(ShowSession, on_delete=models.CASCADE)
-    reservations = models.ForeignKey(Reservations, on_delete=models.CASCADE)
+    reservations = models.ForeignKey(Reservation, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.row} {self.seat}"
