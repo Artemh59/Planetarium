@@ -6,7 +6,7 @@ from planetarium_api.models import (
     ShowTheme,
     AstronomyShow,
     ShowSession,
-    Ticket
+    Ticket,
 )
 
 

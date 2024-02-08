@@ -7,7 +7,6 @@ from planetarium_api.views import (
     AstronomyShowViewSet,
     ShowSessionViewSet,
     TicketViewSet,
-
 )
 
 router = DefaultRouter()

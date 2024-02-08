@@ -20,6 +20,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/planetarium/", include("planetarium_api.urls", namespace="planetarium_api")),
+    path(
+        "api/planetarium/", include("planetarium_api.urls", namespace="planetarium_api")
+    ),
     path("api/user/", include("user.urls", namespace="user")),
 ]
