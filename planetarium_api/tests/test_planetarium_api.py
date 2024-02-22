@@ -10,11 +10,11 @@ from planetarium_api.serializers import PlanetariumDomeSerializer
 URL = reverse("planetarium_api:planetariumdome-list")
 
 
-def detail_url(dome_id: int):
+def detail_url(dome_id: int) -> str:
     return reverse("planetarium_api:planetariumdome-detail", args=[dome_id])
 
 
-def create_planetarium_dome(**params):
+def create_planetarium_dome(**params) -> PlanetariumDome:
     defaults = {
         "name": "test",
         "rows": 10,
